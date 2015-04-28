@@ -5,7 +5,11 @@ $jsonObj = array();
 
 $jsonObj['Type']=$_SERVER['REQUEST_METHOD'];
 
-$jsonObj['parameters']=$_REQUEST;
+if(count($_REQUEST)){
+  $jsonObj['parameters']=$_REQUEST;
+} else {
+  $jsonObj['parameters']=NULL;
+}
 
 echo json_encode($jsonObj);
 
