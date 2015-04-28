@@ -1,6 +1,6 @@
 <?php
 
-$getKeys = new $array();
+$getKeys = array();
 $getKeys[] = 'min-multiplicand';
 $getKeys[] = 'max-multiplicand';
 $getKeys[] = 'min-multiplier';
@@ -14,7 +14,7 @@ foreach ($getKeys as $value) {
         echo "Missing parameter $value.<br>";
         $missingParam = 1;
     }
-    if(! is_int($_GET[$value])){
+    else if(! is_int($_GET[$value])){
         echo "$value must be an integer.<br>";
         $badParam = 1;
     }
@@ -32,16 +32,16 @@ $max_mp = intval($_GET['max-multiplier']);
 
 //error check get paramaters
 if($min_mc>$max_mc){
-    echo "Minimum multiplicand larger than maximum.<br>"
-    return
+    echo "Minimum multiplicand larger than maximum.<br>";
+    return;
 }
 
 if($min_mp>$max_mp){
-    echo "Minimum multiplier larger than maximum.<br>"
-    return
+    echo "Minimum multiplier larger than maximum.<br>";
+    return;
 }
 
-echo "all tests passed"
+echo "all tests passed";
 
 
 ?>
