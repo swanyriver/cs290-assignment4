@@ -46,15 +46,22 @@ if($incorect_param){
     return;
 }
 
-//echo "all tests passed";
-
-
-//create table
-echo "<style>
+//create html document
+echo "<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>[cs290] assignment 4 muliplication table</title>
+<style>
 th {font-weight: bold;}
 table * {padding:5px;}
+table {border: solid 1px;}
 </style>
-<table border=1> 
+</head>
+<body>";
+
+//create table
+echo "<table> 
 <tr>
 <td>";
 
@@ -69,7 +76,9 @@ for ($row = $min_mc; $row <= $max_mc; $row++){
     }
 }
 
-echo "</table>";
+echo "</table>
+</body>
+</html>";
 
 
 ?>
