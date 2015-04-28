@@ -7,16 +7,16 @@ $getKeys[] = 'min-multiplier';
 $getKeys[] = 'max-multiplier';
 
 //check that all four get paramaters are provided and integers
-$missingParam = 0;
-$badParam = 0;
+$missingParam = false;
+$badParam = false;
 foreach ($getKeys as $value) {
     if (! isset($_GET[$value])){
         echo "Missing parameter $value.<br>";
-        $missingParam = 1;
+        $missingParam = true;
     }
-    else if(! is_int($_GET[$value])){
+    else if(! is_numeric($_GET[$value])){
         echo "$value must be an integer.<br>";
-        $badParam = 1;
+        $badParam = true;
     }
 }
 if ($missingParam || $badParam){
@@ -31,13 +31,18 @@ $max_mp = intval($_GET['max-multiplier']);
 
 
 //error check get paramaters
+$incorect_param = false;
 if($min_mc>$max_mc){
     echo "Minimum multiplicand larger than maximum.<br>";
-    return;
+    $incorect_param = true;
 }
 
 if($min_mp>$max_mp){
     echo "Minimum multiplier larger than maximum.<br>";
+    $incorect_param = true;
+}
+
+if($incorect_param){
     return;
 }
 
