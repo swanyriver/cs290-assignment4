@@ -54,8 +54,8 @@ echo "<!DOCTYPE html>
 <title>[cs290] assignment 4 muliplication table</title>
 <style>
 th {font-weight: bold;}
-table * {padding:5px;}
-table {border: solid 1px;}
+th,td {padding:5px; border: solid 1px;}
+table {border-collapse: collapse; border: solid thick;}
 </style>
 </head>
 <body>";
