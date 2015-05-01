@@ -1,5 +1,29 @@
 <?php
 session_start();
+if(session_status() != PHP_SESSION_ACTIVE){
+  echo "Problem starting session</body></html>";
+  return;
+}
+
+if(isset($_SESSION['loggedIN'])){
+  if(isset($_GET['logout'])){
+    //destroy session
+    session_unset();
+    session_destroy();
+  }
+  else {
+    //redirect to content 1 page
+    //using code example from lecture that first makes a string array seperated
+    // by / excluding the last string, then creates a string from that array inserting
+    // slashes back in, using this as the prefix for redirection
+    $path = explode('/', $_SERVER['PHP_SELF'], -1);
+    $path = implode('/',$path);
+    $redirect = "http://" . $_SERVER['HTTP_HOST'] . $path;
+    header("Location: {$redirect}/content1.php", true);
+    exit();
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,13 +34,6 @@ session_start();
     </style>
   </head>
 <body>
-
-<?php
-if(session_status() != PHP_SESSION_ACTIVE){
-  echo "Problem starting session</body></html>";
-  return;
-}
-?>
 
   <form action = 'content1.php' method='post'>
     Enter UserName:<input type="text" name="username">
