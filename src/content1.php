@@ -11,8 +11,15 @@ if(!isset($_SESSION['loggedIN'])){
 
   //user not logged in and not coming from logged-in
   if(!isset($_POST['username'])){
-    //redirect to login.php
-    echo "bad access";
+    //redirect to login
+    //using code example from lecture that first makes a string array seperated
+    // by / excluding the last string, then creates a string from that array inserting
+    // slashes back in, using this as the prefix for redirection
+    // then modifies document header
+    $path = explode('/', $_SERVER['PHP_SELF'], -1);
+    $path = implode('/',$path);
+    $redirect = "http://" . $_SERVER['HTTP_HOST'] . $path;
+    header("Location: {$redirect}/login.php", true);
     exit();
   }
 
