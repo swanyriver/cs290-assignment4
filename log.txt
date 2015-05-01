@@ -1,0 +1,42 @@
+Start: Fri, 1 May 2015 16:30:39 -0700 
+End: Fri, 1 May 2015 16:50:39 -0700 
+Tasks: added some comments
+Start: Fri, 1 May 2015 15:01:36 -0700 
+End: Fri, 1 May 2015 15:14:46 -0700 
+Tasks: completed redirects to log in when no user logged in
+Start: Fri, 1 May 2015 14:52:26 -0700 
+End: Fri, 1 May 2015 15:01:36 -0700 
+Tasks: added redirect message and link to content2
+Start: Fri, 1 May 2015 14:20:26 -0700 
+End: Fri, 1 May 2015 14:52:26 -0700 
+Tasks: login and content1 states establish, redirect to content1 written, session destroyed on logout
+Start: Tue, 28 Apr 2015 22:00:17 -0700 
+End: Tue, 28 Apr 2015 22:26:09 -0700 
+Tasks: username saved in session, visit count set, logout=true GET back to login page
+Start: Tue, 28 Apr 2015 21:20:17 -0700 
+End: Tue, 28 Apr 2015 22:00:17 -0700 
+Tasks: control structure set for login on content1 used a 2x2 truth table to determine possible states
+Start: Tue, 28 Apr 2015 16:35:24 -0700 
+End: Tue, 28 Apr 2015 16:38:11 -0700 
+Tasks: empty array detection completed
+Start: Tue, 28 Apr 2015 15:45:46 -0700 
+End: Tue, 28 Apr 2015 16:35:24 -0700 
+Tasks: loopback almost complete
+Start: Tue, 28 Apr 2015 15:41:08 -0700 
+End: Tue, 28 Apr 2015 15:45:46 -0700 
+Tasks: fixed table styling
+Start: Tue, 28 Apr 2015 15:28:04 -0700 
+End: Tue, 28 Apr 2015 15:41:08 -0700 
+Tasks: ran html validator on generated html and made corrections
+Start: Tue, 28 Apr 2015 15:00:04 -0700 
+End: Tue, 28 Apr 2015 15:28:04 -0700 
+Tasks: multiplication table working
+Start: Mon, 27 Apr 2015 23:14:41 -0700
+End: Mon, 27 Apr 2015 23:34:39 -0700 
+Tasks: paramater testing working
+Start: Mon, 27 Apr 2015 22:07:42 -0700 
+End: Mon, 27 Apr 2015 23:14:41 -0700 
+Tasks: fixed php syntax, installed local apache and php for local testing
+Start: Mon, 27 Apr 2015 21:40:42 -0700 
+End: Mon, 27 Apr 2015 22:07:42 -0700 
+Tasks: checking multtable paramaters
