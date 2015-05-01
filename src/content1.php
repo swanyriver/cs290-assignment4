@@ -1,8 +1,6 @@
 <?php
 session_start();
-?>
 
-<?php
 if(session_status() != PHP_SESSION_ACTIVE){
   echo "Problem starting session</body></html>";
   return;
@@ -47,8 +45,22 @@ if(!isset($_SESSION['loggedIN'])){
   </head>
 <body>
 
-<?php echo "Hello {$_SESSION['username']} you have visited this page {$_SESSION['visitCount']} times before. 
-Click <a href='login.php?logout=true'>here</a> to logout."; ?>
+<?php 
+
+if(isset($_GET['redirect'])){
+  echo "You are already logged in, welcome back to content1 <br><br>";
+}
+
+echo "Hello {$_SESSION['username']} you have visited this page {$_SESSION['visitCount']} times before. 
+Click <a href='login.php?logout=true'>here</a> to logout."; 
+
+if (isset($_SESSION['loggedIN'])){
+  echo "<br><br><a href='content2.php'>content2</a>";
+}
+
+?>
+
+
 
 </body>
 </html>

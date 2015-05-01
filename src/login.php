@@ -19,7 +19,7 @@ if(isset($_SESSION['loggedIN'])){
     $path = explode('/', $_SERVER['PHP_SELF'], -1);
     $path = implode('/',$path);
     $redirect = "http://" . $_SERVER['HTTP_HOST'] . $path;
-    header("Location: {$redirect}/content1.php", true);
+    header("Location: {$redirect}/content1.php?redirect=true", true);
     exit();
   }
 }
