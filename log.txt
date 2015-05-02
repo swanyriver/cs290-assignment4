@@ -1,3 +1,6 @@
+Start: Fri, 1 May 2015 17:00:06 -0700 
+End: Fri, 1 May 2015 17:23:06 -0700 
+Tasks: request was including $_COOKIES, switch to a pointer to $_GET or $_POST
 Start: Fri, 1 May 2015 16:30:39 -0700 
 End: Fri, 1 May 2015 16:50:39 -0700 
 Tasks: added some comments
